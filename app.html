@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Joke Generator</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    #joke { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Joke Generator</h1>
+  <button onclick="newJoke()">Tell me a joke</button>
+  <div id="joke"></div>
+  <script>
+    const jokes = ["Why don’t skeletons fight each other? They don’t have the guts.",
+                  "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+                  "Why don’t scientists trust atoms? Because they make up everything!"];
+    function newJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('joke').innerText = joke;
+    }
+  </script>
+  <p><a href="index.html">Back to Home</a> | <a href="scratch.html">Back to Scratch Page</a></p>
+</body>
+</html>
